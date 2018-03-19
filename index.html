@@ -32,6 +32,29 @@
     <!-- Main div to receive content -->
 
     <main>
+        <div class="container-fluid bg-dark d-md-none">
+            <div class="input-group-vertical text-center">
+                <input type="text" class="form-control" aria-label="..." placeholder="Gare de départ">
+                <input type="text" class="form-control" aria-label="..." placeholder="Gare d'arrivée">
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid d-md-none">
+            <div class="input-group text-center">
+                <input type="text" class="form-control" aria-label="..." placeholder="Aller">
+                <input type="text" class="form-control" aria-label="..." placeholder="Retour">
+            </div>
+            <br>
+            <input type="text" class="form-control" aria-label="..." placeholder="1 Adulte">
+            <br>
+            <div>
+                <button type="button" class="btn-light btn-lg btn-block">Utiliser un code de réduction</button>
+                <br>
+                <button type="button" class="btn-info btn-lg btn-block">Rechercher</button>
+            </div>
+
+        </div>
+
         <div class="container-fluid">
             <br>
 
@@ -41,40 +64,85 @@
                 <div class="col-md-4 offset-md-2 text-center">
                     <div class="card">
                         <div class="card-body">
-                            <div class="input-group">
-                                <div class="col-12 text-center">
-                                    <input type="text" class="form-control" aria-label="...">
-                                </div>
-                                <div class="col-12 text-center">
-                                    <input type="text" class="form-control" aria-label="...">
-                                </div>
+                            <h5>Quel est votre trajet?</h5>
+                            <div class="input-group-vertical col-12 text-center">
+                                <input type="text" class="form-control" aria-label="..." placeholder="Saisissez votre gare de départ...">
+                                <input type="text" class="form-control" aria-label="..." placeholder="Saisissez votre gare d'arrivée...">
                             </div>
                             <br>
-                            <div class="input-group">
-                                <div class="col-12 text-center">
-                                    <input type="text" class="form-control" aria-label="...">
-                                </div>
-                                <div class="col-12 text-center">
-                                    <input type="text" class="form-control" aria-label="...">
-                                </div>
+                            <div class="input-group-vertical col-12 text-center">
+                                <input type="text" class="form-control" aria-label="..." placeholder="Aller">
+                                <input type="text" class="form-control" aria-label="..." placeholder="Retour">
                             </div>
                             <br>
-                            <div class="input-group">
-                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <div class="input-group col-12 text-center">
+                                <input type="text" class="form-control" aria-label="..." placeholder="1 Adulte">
                                 <div class="input-group-append">
                                     <span class="input-group-text">+</span>
                                 </div>
+                            </div>
+                            <br>
+                            <div>
+                                <button type="button" class="btn btn-light">Utiliser un code de réduction</button>
+                                <button type="button" class="btn btn-info">Rechercher</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="card">
+                        <div class="card-header">
+                            <h4>Les petits plus de Trainline</h4>
+                        </div>
                         <div class="card-body">
+                            <span>
+                                <img src="">
+                                <h5>Vos billets au meilleur prix</h5>
+                                <p>Achetez vos billets aux prix fixés par les transporteurs, sans frais supplémentaires.</p>
+                            </span>
+                            <br>
+                            <span>
+                                <img src="">
+                                <h5>Cartes de réduction</h5>
+                                <p>Elles sont toutes acceptées, comme vos cartes de fidélité.</p>
+                            </span>
+                            <br>
+                            <span>
+                                <img src="">
+                                <h5>Payez en toute sécurité</h5>
+                                <p>CB, Amex, PayPal, Chèques-Vacances ANCV : c’est vous qui voyez.
+                                </p>
+                            </span>
+                        </div>
+                        <footer class="card-footer">
+                            <small class="text-muted text-uppercase">
+                                distributeur agréé
+                            </small>
+                            <br>
+                            <span>
+                                <img src="">
+                                <img src="">
+                                <img src="">
+                                <img src="">
+                            </span>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-8 offset-md-2 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Ils nous font confiance. Nous vendons leurs billets.
+
+                            </p>
+
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- Sponsors -->
             <!-- Photos texte deux colonnes trois lignes, ne pas afficher en small -->
