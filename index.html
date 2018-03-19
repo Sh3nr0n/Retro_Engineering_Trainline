@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="pos-f-t">
-            <nav class="navbar navbar-dark bg-dark text-white">Trainline</nav>
+            <nav class="navbar navbar-dark bg-dark"></nav>
             <div class="collapse " id="navbarToggleExternalContent">
                 <div class="bg-dark p-4">
                     <h4 class="text-white">Collapsed content</h4>
@@ -25,6 +25,10 @@
                     aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <!-- Display on mobile -->
+                <span class="text-white mx-auto d-md-none">Trainline</span>
+                <!-- Display on desktop -->
+                <span class="text-white text-left d-none d-sm-none d-md-block">Trainline</span>
             </nav>
         </div>
     </header>
@@ -32,7 +36,11 @@
     <!-- Main div to receive content -->
 
     <main>
+
+        <!-- User forms mobile version -->
+
         <div class="container-fluid bg-dark d-md-none">
+            <h5 class="text-center text-white">Réserver vos billets de train en France et en Europe</h5>
             <div class="input-group-vertical text-center">
                 <input type="text" class="form-control" aria-label="..." placeholder="Gare de départ">
                 <input type="text" class="form-control" aria-label="..." placeholder="Gare d'arrivée">
@@ -48,222 +56,192 @@
             <input type="text" class="form-control" aria-label="..." placeholder="1 Adulte">
             <br>
             <div>
-                <button type="button" class="btn-light btn-lg btn-block">Utiliser un code de réduction</button>
+                <button type="button" class="btn btn-light  btn-lg btn-block">+ Utiliser un code de réduction</button>
                 <br>
-                <button type="button" class="btn-info btn-lg btn-block">Rechercher</button>
+                <button type="button" class="btn btn-info btn-lg btn-block">Rechercher un billet</button>
             </div>
-
+            <br>
+        </div>
+        <div class="container-fluid d-md-none border-top border-bottom">
+            <p class="text-muted text-center">
+                distributeur agréé</p>
+            <div class="row">
+                <div class="col-10 offset-3 d-flex flex-wrap">
+                    <img src="img/logo_sncf.svg">
+                    <img src="img/logo_sncf.svg">
+                    <img src="img/logo_sncf.svg">
+                    <img src="img/logo_sncf.svg">
+                </div>
+            </div>
+            <br>
         </div>
 
         <div class="container-fluid">
             <br>
 
-            <!-- Inputs + form sur deux colonnes -->
+            <!-- User forms desktop version -->
+            <div class="d-none d-sm-none d-md-block">
 
-            <div class="row">
-                <div class="col-md-4 offset-md-2 text-center">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Quel est votre trajet?</h5>
-                            <div class="input-group-vertical col-12 text-center">
-                                <input type="text" class="form-control" aria-label="..." placeholder="Saisissez votre gare de départ...">
-                                <input type="text" class="form-control" aria-label="..." placeholder="Saisissez votre gare d'arrivée...">
-                            </div>
-                            <br>
-                            <div class="input-group-vertical col-12 text-center">
-                                <input type="text" class="form-control" aria-label="..." placeholder="Aller">
-                                <input type="text" class="form-control" aria-label="..." placeholder="Retour">
-                            </div>
-                            <br>
-                            <div class="input-group col-12 text-center">
-                                <input type="text" class="form-control" aria-label="..." placeholder="1 Adulte">
-                                <div class="input-group-append">
-                                    <span class="input-group-text">+</span>
+                <div class="row">
+                    <div class="col-md-4 offset-md-2 text-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Quel est votre trajet?</h5>
+                                <div class="input-group-vertical col-12 text-center">
+                                    <input type="text" class="form-control" aria-label="..." placeholder="Saisissez votre gare de départ...">
+                                    <input type="text" class="form-control" aria-label="..." placeholder="Saisissez votre gare d'arrivée...">
                                 </div>
-                            </div>
-                            <br>
-                            <div>
-                                <button type="button" class="btn btn-light">Utiliser un code de réduction</button>
-                                <button type="button" class="btn btn-info">Rechercher</button>
+                                <br>
+                                <div class="input-group-vertical col-12 text-center">
+                                    <input type="text" class="form-control" aria-label="..." placeholder="Aller">
+                                    <input type="text" class="form-control" aria-label="..." placeholder="Retour">
+                                </div>
+                                <br>
+                                <div class="input-group col-12 text-center">
+                                    <input type="text" class="form-control" aria-label="..." placeholder="1 Adulte">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">+</span>
+                                    </div>
+                                </div>
+                                <br>
+                                <div>
+                                    <button type="button" class="btn btn-light">Utiliser un code de réduction</button>
+                                    <button type="button" class="btn btn-info">Rechercher</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Les petits plus de Trainline</h4>
+                    <div class="col-md-4 text-center">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Les petits plus de Trainline</h4>
+                            </div>
+                            <div class="card-body">
+                                <span>
+                                    <img src="">
+                                    <h5>Vos billets au meilleur prix</h5>
+                                    <p>Achetez vos billets aux prix fixés par les transporteurs, sans frais supplémentaires.</p>
+                                </span>
+                                <span>
+                                    <img src="">
+                                    <h5>Cartes de réduction</h5>
+                                    <p>Elles sont toutes acceptées, comme vos cartes de fidélité.</p>
+                                </span>
+                                <span>
+                                    <img src="">
+                                    <h5>Payez en toute sécurité</h5>
+                                    <p>CB, Amex, PayPal, Chèques-Vacances ANCV : c’est vous qui voyez.
+                                    </p>
+                                </span>
+                                <img src="img/logo_paypal.svg">
+
+                            </div>
+                            <footer class="card-footer">
+                                <small class="text-muted text-uppercase">
+                                    distributeur agréé
+                                </small>
+                                <span>
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                </span>
+                            </footer>
                         </div>
-                        <div class="card-body">
-                            <span>
-                                <img src="">
-                                <h5>Vos billets au meilleur prix</h5>
-                                <p>Achetez vos billets aux prix fixés par les transporteurs, sans frais supplémentaires.</p>
-                            </span>
-                            <br>
-                            <span>
-                                <img src="">
-                                <h5>Cartes de réduction</h5>
-                                <p>Elles sont toutes acceptées, comme vos cartes de fidélité.</p>
-                            </span>
-                            <br>
-                            <span>
-                                <img src="">
-                                <h5>Payez en toute sécurité</h5>
-                                <p>CB, Amex, PayPal, Chèques-Vacances ANCV : c’est vous qui voyez.
-                                </p>
-                            </span>
-                        </div>
-                        <footer class="card-footer">
-                            <small class="text-muted text-uppercase">
-                                distributeur agréé
-                            </small>
-                            <br>
-                            <span>
-                                <img src="">
-                                <img src="">
-                                <img src="">
-                                <img src="">
-                            </span>
-                        </footer>
                     </div>
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col-md-8 offset-md-2 text-center">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Ils nous font confiance. Nous vendons leurs billets.
 
-                            </p>
+            <!-- Sponsors desktop version -->
 
+            <div class="d-none d-sm-none d-md-block">
+
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Ils nous font confiance. Nous vendons leurs billets.
+                                </p>
+                                <div class="d-flex flex-wrap">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                    <img src="img/logo_sncf.svg">
+                                </div>
+                                <h1>Tous les billets. Un seul guichet.
+                                </h1>
+                                <p>Nous vendons tous les billets que vous avez l’habitude d’acheter en France et tous ceux dont
+                                    vous pourriez avoir besoin à l’étranger.
+                                </p>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Sponsors mobile version -->
 
-            <!-- Sponsors -->
+            <div class="container-fluid d-md-none">
+                <h5>Nous vendons tous les billets que vous avez l’habitude d’acheter en France et tous ceux dont vous pourriez
+                    avoir besoin à l’étranger.</h5>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="img/icons8-flèche-droite-40.png">
+                    </div>
+                    <div class="col">
+                        <h5>Sans frais supplémentaires</h5>
+                        <p>Achetez vos billets aux prix fixés par les transporteurs.</p>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="img/icons8-flèche-droite-40.png">
+                        </div>
+                        <div class="col">
+                            <h5>Cartes de réduction</h5>
+                            <p>Elles sont toutes acceptées, comme vos cartes de fidélité.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="img/icons8-flèche-droite-40.png">
+                        </div>
+                        <div class="col">
+                            <h5>Payez comme vous voulez</h5>
+                            <p>CB, Amex, PayPal, Chèques-Vacances ANCV.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap">
+                        <img src="img/logo_paypal.svg">
+                    </div>
+
+                </div>
+            </div>
+
             <!-- Photos texte deux colonnes trois lignes, ne pas afficher en small -->
+
+            
             <!-- Moyens paiement et billets sur deux colonnes, ne pas afficher en small -->
             <!-- Découvrez l'Europe, image responsive -->
             <!-- Télécharger l'appli, à n'afficher qu'en small et xs -->
             <!-- Témoignages, ne pas afficher en small -->
             <!-- Reservation, ne pas afficher en small -->
             <!-- Contacts et horaires, etc. 1 ligne et 4 colonnes en medium , 2 lignes et 2 colonnes en small -->
-
-
-            <!-- example link -->
-            <div class="container-fluid">
-                <div class="col-sm-6 offset-3 text-center">
-                    <h1>Réserver une chambre d'hôtel</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 offset-3">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nom de l'hôtel</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="row1">Hotel de la gare</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary userInput" value="Hotel de la gare">Réserver</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="row2">Hotel du port</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary userInput" value="Hotel du port">Réserver</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td id="row3">Hotel de l'angle de la rue</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary userInput" value="Hotel de l'angle de la rue">Réserver</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Large modal -->
-
-                <div id="mainModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content container-fluid">
-                            <div class="modal-header">
-                                <h5 id="hotel" class="modal-title"></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Num chambre</th>
-                                                    <th scope="col">Nombre de personnes</th>
-                                                    <th scope="col">Date</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="#">
-                                                                <option selected></option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="#">
-                                                                <option selected></option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="input-group">
-                                                            <select class="custom-select" id="#">
-                                                                <option selected></option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- example end-->
 
         </div>
     </main>
